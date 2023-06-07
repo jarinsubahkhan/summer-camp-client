@@ -1,53 +1,99 @@
-
-    
-   [   {
-        "_id": 1,
-        "name": "Waltz",
-        "description": "The Waltz is a smooth and elegant ballroom dance characterized by graceful movements and flowing rotations. It is known for its sweeping turns and long, gliding steps.",
-        "image":"https://i.ibb.co/ChrCKBx/istockphoto-1369112672-612x612.jpg",
-        "students_total": 25,
-        "instructor_name": "Emily Johnson"
+[
+    {
+      "_id": 1,
+      "name": "Waltz",
+      "description": "The Waltz is a smooth and elegant ballroom dance characterized by graceful movements and flowing rotations. It is known for its sweeping turns and long, gliding steps.",
+      "image": "https://i.ibb.co/ChrCKBx/istockphoto-1369112672-612x612.jpg",
+      "students_total": 25,
+      "students_available": 10,
+      "instructor_name": {
+        "name": "Emily Johnson",
+        "image": "https://i.ibb.co/ZzFzNY9/original.jpg",
+        "email": "emily.johnson@example.com",
+        "classes_taken": 50,
+        "classes_names": ["Waltz", "Foxtrot"]
       },
-      {
-        "_id": 2,
-        "name": "Tango",
-        "description": "The Tango is a passionate and dramatic ballroom dance that originated in Argentina. It is known for its intense expressions, intricate footwork, and close partner connections.",
-        "image":"https://i.ibb.co/kDpdxLG/Para-Dos-Pointe-Tango-Dancers-Erin-Scott-Kafadar-Alexander-Richardson-Photo-by-Mark-Ruddick.jpg",
-        "students_total": 30,
-        "instructor_name": "Carlos Ramirez"
+      "price": 20.00
+    },
+    {
+      "_id": 2,
+      "name": "Tango",
+      "description": "The Tango is a passionate and dramatic ballroom dance that originated in Argentina. It is known for its intense expressions, intricate footwork, and close partner connections.",
+      "image": "https://i.ibb.co/kDpdxLG/Para-Dos-Pointe-Tango-Dancers-Erin-Scott-Kafadar-Alexander-Richardson-Photo-by-Mark-Ruddick.jpg",
+      "students_total": 30,
+      "students_available": 15,
+      "instructor_name": {
+        "name": "Carlos Ramirez",
+        "image": "https://i.ibb.co/hD1Lb42/0118-fitness-nwdp-franco-nieto-yp2bj6.webp",
+        "email": "carlos.ramirez@example.com",
+        "classes_taken": 60,
+        "classes_names": ["Tango", "Rumba"]
       },
-      {
-        "_id": 3,
-        "name": "Foxtrot",
-        "description": "The Foxtrot is a smooth and sophisticated ballroom dance characterized by long, flowing movements and graceful glides across the dance floor. It combines elegance with simplicity.",
-        "image":"https://i.ibb.co/SQM0vYh/slide-dance2inspire.jpg",
-        "students_total": 20,
-        "instructor_name": "Sophia Anderson"
+      "price": 25.00
+    },
+    {
+      "_id": 3,
+      "name": "Foxtrot",
+      "description": "The Foxtrot is a smooth and sophisticated ballroom dance characterized by long, flowing movements and graceful glides across the dance floor. It combines elegance with simplicity.",
+      "image": "https://i.ibb.co/SQM0vYh/slide-dance2inspire.jpg",
+      "students_total": 20,
+      "students_available": 5,
+      "instructor_name": {
+        "name": "Sophia Anderson",
+        "image": "https://i.ibb.co/5TR73Yj/Purple-PDA-17-1024x683.jpg",
+        "email": "sophia.anderson@example.com",
+        "classes_taken": 40,
+        "classes_names": ["Foxtrot", "Cha-Cha"]
       },
-      {
-        "_id": 4,
-        "name": "Cha-Cha",
-        "description": "The Cha-Cha is a lively and energetic Latin dance that incorporates quick footwork, syncopated steps, and playful hip movements. It is known for its infectious rhythm and fun atmosphere.",
-        "image":"https://i.ibb.co/rpp4cnN/couple-dancers-ardently-perform-the-latin-american-dance-on-a-large-professional-stage-with-sparkle.jpg",
-        "students_total": 35,
-        "instructor_name": "Juan Martinez"
+      "price": 18.00
+    },
+    {
+      "_id": 4,
+      "name": "Cha-Cha",
+      "description": "The Cha-Cha is a lively and energetic Latin dance that incorporates quick footwork, syncopated steps, and playful hip movements. It is known for its infectious rhythm and fun atmosphere.",
+      "image": "https://i.ibb.co/rpp4cnN/couple-dancers-ardently-perform-the-latin-american-dance-on-a-large-professional-stage-with-sparkle.jpg",
+      "students_total": 35,
+      "students_available": 20,
+      "instructor_name": {
+        "name": "Juan Martinez",
+        "image": "https://i.ibb.co/ccgFrkC/095ff6b891e232c27db691e0653b0290.jpg",
+        "email": "juan.martinez@example.com",
+        "classes_taken": 55,
+        "classes_names": ["Cha-Cha", "Salsa"]
       },
-      {
-        "_id": 5,
-        "name": "Rumba",
-        "description": "The Rumba is a sensual and romantic Latin dance characterized by slow, deliberate movements, and passionate expressions. It focuses on building strong connections between partners.",
-        "image":"https://i.ibb.co/Ct2GdYY/istockphoto-1408333662-612x612.jpg",
-        "students_total": 15,
-        "instructor_name": "Isabella Lopez"
+      "price": 22.00
+    },
+    {
+      "_id": 5,
+      "name": "Rumba",
+      "description": "The Rumba is a sensual and romantic Latin dance characterized by slow, deliberate movements, and passionate expressions. It focuses on building strong connections between partners.",
+      "image": "https://i.ibb.co/Ct2GdYY/istockphoto-1408333662-612x612.jpg",
+      "students_total": 15,
+      "students_available": 7,
+      "instructor_name": {
+        "name": "Isabella Lopez",
+        "image": "https://i.ibb.co/QvyRzqx/pexels-photo-6715558.webp",
+        "email": "isabella.lopez@example.com",
+        "classes_taken": 45,
+        "classes_names": ["Rumba", "Salsa"]
       },
-      {
-        "_id": 6,
-        "name": "Salsa",
-        "description": "Salsa is an energetic and lively Latin dance style that originated in Cuba. It involves fast-paced footwork, exciting spins, and vibrant music. It is known for its joyful and social nature.",
-        "image":"https://i.ibb.co/NLyfHYx/hispanic-salsa-dancers-performing-580491737-5b72290ac9e77c0050753fb0.jpg",
-        "students_total": 40,
-        "instructor_name": "Miguel Rodriguez"
-      }
-    ]
-  
+      "price": 20.00
+    },
+    {
+      "_id": 6,
+      "name": "Salsa",
+      "description": "Salsa is an energetic and lively Latin dance style that originated in Cuba. It involves fast-paced footwork, exciting spins, and vibrant music. It is known for its joyful and social nature.",
+      "image": "https://i.ibb.co/NLyfHYx/hispanic-salsa-dancers-performing-580491737-5b72290ac9e77c0050753fb0.jpg",
+      "students_total": 40,
+      "students_available": 10,
+      "instructor_name": {
+        "name": "Miguel Rodriguez",
+        "image": "https://i.ibb.co/TMG4sxJ/istockphoto-815122864-612x612.jpg",
+        "email": "miguel.rodriguez@example.com",
+        "classes_taken": 70,
+        "classes_names": ["Salsa", "Tango"]
+      },
+      "price": 15.00
+    }
+  ]
   

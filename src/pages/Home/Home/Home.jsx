@@ -1,3 +1,4 @@
+import Instructors from "../Instructors/Instructors";
 import PopularClasses from "../PopularClasses/PopularClasses";
 import TopSection from "../TopSection/TopSection";
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
       <TopSection></TopSection>  
       <PopularClasses></PopularClasses>  
+      <Instructors></Instructors>
         </div>
     );
 };
