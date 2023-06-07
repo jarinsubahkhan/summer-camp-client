@@ -1,9 +1,12 @@
+import PopularClasses from "../PopularClasses/PopularClasses";
+import TopSection from "../TopSection/TopSection";
 
 
 const Home = () => {
     return (
         <div>
-      <h2>This is my home.</h2>      
+      <TopSection></TopSection>  
+      <PopularClasses></PopularClasses>  
         </div>
     );
 };
