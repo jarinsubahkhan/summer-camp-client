@@ -1,4 +1,4 @@
-
+/*eslint-disable */
 
 const PopularClass = ({classPopular}) => {
     const {image, name, description, students_total, } = classPopular;

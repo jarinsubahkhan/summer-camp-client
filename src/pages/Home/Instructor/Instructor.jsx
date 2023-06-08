@@ -1,4 +1,4 @@
-
+/*eslint-disable*/
 
 const Instructor = ({instruct}) => {
     const {instructor_name} = instruct;
