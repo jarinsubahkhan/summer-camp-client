@@ -3,13 +3,15 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useSelected from "../../hooks/useSelected";
 
 const ClassPage = ({classesDone}) => {
 
   const{_id, name,instructor_name, image, students_available, price, students_total} = classesDone;
 
 const {user} = useContext(AuthContext);
+const [selected, refetch] = useSelected();
 const navigate = useNavigate();
 const location = useLocation();
 
@@ -27,6 +29,7 @@ if(user && user.email){
   .then(res => res.json())
   .then(data => {
     if(data.insertedId){
+      refetch();
       Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -68,7 +71,13 @@ return (
                 <p><small>Price : ${price}</small></p>
             </div>
             <div className="card-actions justify-end">
-              <button onClick={() => handleSelect(classesDone)} className="btn bg-red-500 text-white border-black">Select</button>
+            <Link
+  to="/dashboard/myclass"
+  onClick={() => handleSelect(classesDone)}
+  className="btn bg-red-500 text-white border-black"
+>
+  Select
+</Link>
             </div>
           </div>
         </div>        

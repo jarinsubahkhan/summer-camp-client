@@ -27,7 +27,7 @@ logOut()
         <li><Link to="/">Home</Link></li>
         <li><Link to="/instructors">Instructors</Link></li>
         <li><Link to="/classes">Classes</Link></li>
-        <li><a>Dashboard</a></li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
       </ul>
     </div>
     <p className="font-bold text-2xl ml-4 text-white"><span className="font-bold text-2xl text-red-500">Tango</span>Ace</p>
@@ -37,7 +37,7 @@ logOut()
     <li><Link to="/">Home</Link></li>  
     <li><Link to="/instructors">Instructors</Link></li>
        <li><Link to="/classes">Classes</Link></li>
-       <li><a>Dashboard</a></li>
+       <li><Link to="/dashboard">Dashboard</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
