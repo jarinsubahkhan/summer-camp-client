@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 
 const SignUp = () => {
@@ -19,9 +21,27 @@ createUser(data.email, data.password)
     console.log(loggedUser);
     updateUserProfile(data.name, data.photoUrl)
     .then(() => {
-        console.log('user profile updated');
+    const saveUser = {name: data.name, email: data.email}    
+fetch('http://localhost:5000/users', {
+    method: 'POST',
+    headers: {
+        'content-type':'application/json'
+    },
+    body: JSON.stringify(saveUser) 
+})
+.then(res => res.json())
+.then(data => {
+    if(data.insertedId){
         reset();
+        Swal.fire(
+            'user created successfully!',
+            'success'
+          )
         navigate('/');
+    }
+})
+
+
     })
     .catch(error => console.log(error))
 })
@@ -65,7 +85,7 @@ createUser(data.email, data.password)
           <input
                   name="password"
                   {...register("password", { required: true, minLength: 6,
-                    pattern: /^(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/
+                    pattern: /[A-Za-z\d@$!%*?&]$/
                 })}
                   placeholder="password"
                   className="input input-bordered"
@@ -101,6 +121,7 @@ createUser(data.email, data.password)
         <p className="text-red-300">
         Already have an account? <Link className="underline text-white" to="/login">Login</Link>
       </p>
+      <SocialLogin></SocialLogin>
       </form>
     </div>
   </div>

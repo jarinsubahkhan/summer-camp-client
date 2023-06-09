@@ -2,6 +2,10 @@ import { Link, Outlet } from "react-router-dom";
 import { FaSchool, FaCcMastercard, FaHome, FaRegPlusSquare, FaUserPlus, FaBookmark, FaUserAlt, FaPaypal } from 'react-icons/fa';
 
 const Dashboard = () => {
+
+    const isAdmin = true;
+    const isInstructor = true; 
+
     return (
         <div>
      <div className="drawer lg:drawer-open">
@@ -15,20 +19,29 @@ const Dashboard = () => {
   <div className="drawer-side  bg-stone-500">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
     <ul className="menu p-4 w-80 h-full font-semibold text-black">
-      {/* Sidebar content here */}
-      <li><Link to="/classes"><FaHome></FaHome> Student`s classes</Link></li>
-      <li><Link to="/dashboard/myclass"><FaSchool></FaSchool> My Selected Classes</Link></li>
-      <li><Link to="/dashboard/enrollclass"><FaPaypal></FaPaypal> My Enrolled Classes</Link></li>
-      <li><Link to="/dashboard/payment"><FaCcMastercard></FaCcMastercard> Payment History</Link></li>
+        
+      {isAdmin ? (<>
+        <li><Link to="/"><FaHome></FaHome>Home</Link></li>
+      <li><Link to="/dashboard/manageclass"><FaSchool></FaSchool> Manage Classes</Link></li>
+      <li><Link to="/dashboard/manageusers"><FaUserAlt></FaUserAlt> Manage Users</Link></li>
       <div className="divider"></div>
-      <li><Link to="/dashboard/addclass"><FaRegPlusSquare></FaRegPlusSquare> Add a class</Link></li>
+      </>) : 
+      isInstructor ? (<>
+        <li><Link to="/dashboard/addclass"><FaRegPlusSquare></FaRegPlusSquare> Add a class</Link></li>
       <li><Link to="/dashboard/myclasses"><FaSchool></FaSchool> My Classes</Link></li>
       <li><Link to="/dashboard/students"><FaUserPlus></FaUserPlus> Total enrolled students</Link></li>
       <li><Link to="/dashboard/feedback"><FaBookmark></FaBookmark> Feedback</Link></li>
       <div className="divider"></div>
-      <li><Link to="/"><FaHome></FaHome>Home</Link></li>
-      <li><Link to="/dashboard/manageclass"><FaSchool></FaSchool> Manage Classes</Link></li>
-      <li><Link to="/dashboard/manageusers"><FaUserAlt></FaUserAlt> Manage Users</Link></li>
+      </>) :
+      (<> <li><Link to="/classes"><FaHome></FaHome> Student`s classes</Link></li>
+      <li><Link to="/dashboard/myclass"><FaSchool></FaSchool> My Selected Classes</Link></li>
+      <li><Link to="/dashboard/enrollclass"><FaPaypal></FaPaypal> My Enrolled Classes</Link></li>
+      <li><Link to="/dashboard/payment"><FaCcMastercard></FaCcMastercard> Payment History</Link></li>
+     </>)
+      }
+ 
+ 
+    
     </ul>
   
   </div>

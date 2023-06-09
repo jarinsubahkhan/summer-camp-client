@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 
 const Login = () => {
@@ -81,7 +82,7 @@ const Login = () => {
       </p>
       <div className="">
         {/* Social login buttons */}
-        <button className="btn btn-outline text-white border-red-400">Google Login</button>
+<SocialLogin></SocialLogin>
       </div>
       </form>
      
