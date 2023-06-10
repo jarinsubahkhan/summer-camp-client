@@ -3,8 +3,8 @@ import { FaSchool, FaCcMastercard, FaHome, FaRegPlusSquare, FaUserPlus, FaBookma
 
 const Dashboard = () => {
 
-    const isAdmin = true;
-    const isInstructor = true; 
+    const isAdmin = false;
+    const isInstructor = false; 
 
     return (
         <div>
