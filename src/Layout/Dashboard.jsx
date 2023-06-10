@@ -1,10 +1,16 @@
 import { Link, Outlet } from "react-router-dom";
 import { FaSchool, FaCcMastercard, FaHome, FaRegPlusSquare, FaUserPlus, FaBookmark, FaUserAlt, FaPaypal } from 'react-icons/fa';
+import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
+
 
 const Dashboard = () => {
+// const [selected] = useSelected();
 
-    const isAdmin = false;
-    const isInstructor = false; 
+    // const isAdmin = false;
+    // const isInstructor = false; 
+    const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
 
     return (
         <div>

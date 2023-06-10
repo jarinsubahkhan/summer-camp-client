@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
 import MyDanceClass from "../pages/Dashboard/MyDanceClass/MyDanceClass";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
+import AddClass from "../pages/Dashboard/AddClass/AddClass";
 
  export const router = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
         {
           path: 'manageusers',
           element: <ManageUsers></ManageUsers>
+        },
+        {
+          path:'addclass',
+          element: <AddClass></AddClass>
         }
       ]
     }
