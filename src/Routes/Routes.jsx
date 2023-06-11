@@ -13,6 +13,9 @@ import Dashboard from "../Layout/Dashboard";
 import MyDanceClass from "../pages/Dashboard/MyDanceClass/MyDanceClass";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
+import InstructorRoute from "./InstructorRoute";
+import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
+import AdminRoute from "./AdminRoute";
 
  export const router = createBrowserRouter([
     {
@@ -55,11 +58,15 @@ import AddClass from "../pages/Dashboard/AddClass/AddClass";
         },
         {
           path: 'manageusers',
-          element: <ManageUsers></ManageUsers>
+          element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
         },
         {
           path:'addclass',
-          element: <AddClass></AddClass>
+          element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+        },
+        {
+          path:'myclasses',
+          element:<InstructorRoute><MyClasses></MyClasses></InstructorRoute>
         }
       ]
     }

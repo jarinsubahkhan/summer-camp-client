@@ -65,7 +65,7 @@ return (
           <figure><img className="w-[360px] h-[200px]" src={image} alt="Movie"/></figure>
           <div className="card-body">
             <h2 className="card-title uppercase text-stone-400">{name} Dance</h2>
-            <p className="font-semibold text-slate-100">Teacher : {instructor_name.name}</p>
+            <p className="font-semibold text-slate-100">Teacher : {instructor_name?.name}</p>
             <div className="flex font-bold text-stone-400">
                 <p><small>Available seats : {students_available}</small></p>
                 <p><small>Price : ${price}</small></p>

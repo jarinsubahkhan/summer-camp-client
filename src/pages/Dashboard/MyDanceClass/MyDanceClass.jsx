@@ -34,7 +34,7 @@ const MyDanceClass = () => {
         <div className="text-white">
  <div className="flex uppercase items-center justify-between">
  <h2 className="text-3xl font-bold text-center">Total Selected Class: {selected.length}</h2> 
-      <button className="btn btn-error text-white btn-sm">Payment</button>    
+     
     </div>  
 
     <div className="overflow-x-auto bg-stone-500 rounded-lg mt-8 text-black">
@@ -48,6 +48,7 @@ const MyDanceClass = () => {
         <th>Name</th>
         <th>Email</th>
         <th>Price</th>
+        <th></th>
         <th></th>
       </tr>
     </thead>
@@ -76,6 +77,9 @@ const MyDanceClass = () => {
             
             </td>
             <td>${select.price}</td>
+            <td>
+            <button className="btn btn-error text-white btn-sm">Payment</button>   
+            </td>
             <td>
               <button onClick={() => handleDelete(select)} className="btn btn-outline text-black btn-xs"><FaTrashAlt></FaTrashAlt></button>
             </td>
