@@ -1,6 +1,7 @@
 import { FaTrashAlt } from "react-icons/fa";
 import useSelected from "../../../hooks/useSelected";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MyDanceClass = () => {
@@ -78,7 +79,7 @@ const MyDanceClass = () => {
             </td>
             <td>${select.price}</td>
             <td>
-            <button className="btn btn-error text-white btn-sm">Payment</button>   
+           <Link to="/dashboard/payment"> <button className="btn btn-error text-white btn-sm">Payment</button> </Link>  
             </td>
             <td>
               <button onClick={() => handleDelete(select)} className="btn btn-outline text-black btn-xs"><FaTrashAlt></FaTrashAlt></button>
