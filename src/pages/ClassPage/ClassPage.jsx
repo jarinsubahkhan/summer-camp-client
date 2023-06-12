@@ -1,6 +1,6 @@
 /*eslint-disable */
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -14,6 +14,7 @@ const {user} = useContext(AuthContext);
 const [selected, refetch] = useSelected();
 const navigate = useNavigate();
 const location = useLocation();
+
 
   const handleSelect = (classesDone) => {
  console.log(classesDone);
@@ -73,8 +74,9 @@ return (
             <div className="card-actions justify-end">
             <Link
   to="/dashboard/myclass"
-  onClick={() => handleSelect(classesDone)}
-  className="btn bg-red-500 text-white border-black"
+  onClick={() => handleSelect(classesDone)} 
+ 
+  className="btn bg-red-500 text-white border-black" 
 >
   Select
 </Link>
